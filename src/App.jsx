@@ -1,21 +1,29 @@
-
-import Banner from "./components/Banner"
-import Feature from "./components/Feature"
-import Footer from "./components/Footer"
-import Homepage from "./components/Homepage"
-import Navbar from "./components/Navbar"
+import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } from "react-router-dom"
+import Home from "./pages/Home"
+import RootLayOut from "./components/layout/RootLayOut"
+import ShopGrid from "./pages/ShopGrid"
+import ShopList from "./pages/ShopList"
+import ProductDetails from "./pages/ProductDetails"
+import ShopingCart from "./pages/ShopingCart"
 
 
 function App() {
+  let router = createBrowserRouter(createRoutesFromElements(
+
+    < Route  element={<RootLayOut/>}>
+      <Route index element={<Home/>}></Route>
+      <Route path="/shopgrid" element={<ShopGrid/>}></Route>
+      <Route path="/shoplist" element={<ShopList/>}></Route>
+      <Route path="/productdetails" element={<ProductDetails/>}></Route>
+      <Route path="/shopingcart" element={<ShopingCart/>}></Route>
+    </Route>
+  
+    ))
   
 
   return (
     <>
-<Homepage/>
-<Navbar/>
-<Banner/>
-<Feature/>
-<Footer/>
+<RouterProvider router={router} ></RouterProvider>
     </>
   )
 }

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'dm': ['DM Sans', 'sans-serif'],
+        'lato':' "Lato", sans-serif',
+      'josefin':' "Josefin Sans", sans-serif'
        
       }
     },

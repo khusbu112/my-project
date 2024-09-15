@@ -4,6 +4,8 @@ import Logo from "../assets/logo.png"
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { IoSearch } from "react-icons/io5";
+import Container from './Container';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   let [show, setShow]= useState(false)
   let handleshow= () =>{
@@ -11,19 +13,20 @@ const Navbar = () => {
   }
   return (
     <>
-    <div className='container mx-auto py-7'>
-    <div className="lg:flex lg:justify-between items-center py-4 px-4 lg:px-0  ">
+    <Container >
+
+    <div className="lg:flex lg:justify-between items-center py-6 px-4 lg:px-0  ">
         <div className='lg:w-[30%] '>
         <img src={Logo} alt=''/>
         </div>
      
       <div className='lg:w-[75%]'>
       <ul className={`lg:flex items-center justify-center lg:static absolute transition-all ${show ? 'top-0 right-0 bg-[#FFFFFF] z-50 w-[250px] rounded-tl-[10px]  h-full pl-[30px] pt-[50px] duration-500 shadow-[13px_-3px_37px_0px_#7E33E0]' : 'duration-500 top-0 right-[-250px] w-[250px] h-full bg-none lg:pl-0 pl-[30px] lg:pt-0 pt-[50px] absolute hidden'}`}>
-          <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Home</li>
+          <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'><Link to="/">Home</Link></li>
           <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Page</li>
           <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Products</li>
           <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Blog</li>
-          <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Shop</li>
+          <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'><Link to="/shopgrid">Shop</Link></li>
           <li className='font-dm text-[#0D0E43] text-[16px] lg:px-6 py-2 lg:py-0'>Contact</li>
    
         </ul>
@@ -45,8 +48,9 @@ const Navbar = () => {
         </div>
   </div>
         </div>
+    </Container>
  
-        </div>
+      
     </>
   )
 }

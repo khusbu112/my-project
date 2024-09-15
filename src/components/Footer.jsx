@@ -8,8 +8,8 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <div className="bg-[#EEEFFB] mt-[115px] pl-[200px]">
-        <div className='container '>
+    <div className="bg-[#EEEFFB] mt-[115px] ">
+        <div className='container mx-auto '>
             <div className="flex flex-wrap pt-[95px] pb-[101px] mx-[15px] ">
                 <div className="lg:w-[37%] w-full lg:text-start text-center">
                     <div className="">
